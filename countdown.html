@@ -89,6 +89,17 @@ body{
 
 
     </style>
+.days::after,
+.hours::after,
+.minutes::after,
+.seconds::after {
+  content: attr(class);
+  display: block;
+  transform: scale(0.3);
+  font-weight: bold;
+  margin-top: 5px;
+}
+    
 </head>
 <body>
     
@@ -138,15 +149,3 @@ let timer = setInterval(function() {
 }, 1);
 </script>
 </html>
-
-
-.days::after,
-.hours::after,
-.minutes::after,
-.seconds::after {
-  content: attr(class);
-  display: block;
-  transform: scale(0.3);
-  font-weight: bold;
-  margin-top: 5px;
-}
