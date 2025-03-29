@@ -16,7 +16,7 @@ body{
   text-align: center;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
-  font-size: 1em;
+  font-size: .7em;
   letter-spacing: 5px;
 }
 
@@ -26,7 +26,7 @@ body{
   width: 60px;
   height: 50px;
   font-size: .5em;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -138,3 +138,15 @@ let timer = setInterval(function() {
 }, 1);
 </script>
 </html>
+
+
+.days::after,
+.hours::after,
+.minutes::after,
+.seconds::after {
+  content: attr(class);
+  display: block;
+  transform: scale(0.3);
+  font-weight: bold;
+  margin-top: 5px;
+}
